@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import Comment from "../Comment/Comment";
 
 const Comments = () => {
@@ -11,7 +12,7 @@ const Comments = () => {
     return (
         <div className='commentsBox'>
             {commentList.map(comment =>
-                <Comment id={comment.id} name={comment.name} email={comment.email} body={comment.body}/>
+                <Comment key={comment.id} name={comment.name} email={comment.email} body={comment.body}/>
             )}
         </div>
     );

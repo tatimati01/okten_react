@@ -1,5 +1,6 @@
-import Post from "../Post/Post";
 import {useEffect, useState} from 'react';
+
+import Post from "../Post/Post";
 
 const Posts = () => {
     const [postList, setPostList] = useState([]);
@@ -10,7 +11,7 @@ const Posts = () => {
     },[]);
     return (
         <div className='stylePostBox'>
-            {postList.map(post => <Post id={post.id} title={post.title} body={post.body}/>)}
+            {postList.map(post => <Post key={post.id} title={post.title} body={post.body}/>)}
         </div>
     );
 };
