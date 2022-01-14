@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import
+import './App.css';
 
 const App = () => {
     const [launchesList, setLaunchesList] = useState([]);
@@ -11,9 +11,9 @@ const App = () => {
             });
     },[]);
     return (
-        <div className='launchStyle'>
+        <div className='mainBox'>
             {
-                launchesList.map(value => <div key={value.flight_number}>
+                launchesList.map(value => <div key={value.flight_number} className='launchStyle'>
                     <h1>{value.mission_name} ({value.launch_year} year)</h1>
                     <img src={value.links.mission_patch_small} alt={value.mission_name}/>
 
