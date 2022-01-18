@@ -7,9 +7,8 @@ const Users = () => {
     const [usersList, setUsersList] = useState([]);
 
     useEffect(() => {
-        userService.getAll().then(users => setUsersList(users));
+        userService.getAll().then(value => setUsersList(value))
     }, [])
-
     return (
         <div className='usersBlock'>
             {usersList.map(user => <User key={user.id} user={user}/>)}
