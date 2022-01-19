@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {userService} from "../../services/user.service";
 import User from "../User/User";
 
-const Users = () => {
+const Users = ({getUser}) => {
     const [usersList, setUsersList] = useState([]);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ const Users = () => {
     }, [])
     return (
         <div className='usersBlock'>
-            {usersList.map(user => <User key={user.id} user={user}/>)}
+            {usersList.map(user => <User key={user.id} user={user} getUser={getUser}/>)}
         </div>
     );
 };

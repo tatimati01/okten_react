@@ -1,0 +1,15 @@
+.detailsBox {
+    width: 300px;
+    padding: 20px;
+    background: deepskyblue;
+}
+
+.btnPosts {
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    background: lightblue;
+    font-weight: bold;
+    font-size: large;
+}
