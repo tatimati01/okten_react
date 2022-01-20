@@ -1,0 +1,48 @@
+.formContainer {
+    background: deeppink;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 60px;
+}
+
+.form label {
+    font-size: x-large;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0 20px;
+}
+
+.inputStyle {
+    font-size: large;
+    background: whitesmoke;
+    border: none;
+    border-radius: 10px;
+}
+
+.form button {
+    background: lightpink;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.userStyle {
+    border-left: 4px deeppink solid;
+    font-size: x-large;
+    padding-left: 10px;
+    margin: 10px;
+}
+
+.userWrapper {
+    background: #fcd2d8;
+    padding: 20px;
+}
