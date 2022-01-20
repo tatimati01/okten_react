@@ -25,6 +25,18 @@
 }
 
 .form button {
+    background: purple;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.btnBack {
     background: lightpink;
     border: none;
     width: 200px;
@@ -33,6 +45,7 @@
     color: whitesmoke;
     font-size: larger;
     font-weight: bold;
+    margin: 5px;
 }
 
 .userStyle {

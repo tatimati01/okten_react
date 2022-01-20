@@ -4,41 +4,46 @@ const FilterForm = ({getFilter}) => {
 
     const [formState, setFormState] = useState({name: '', username: '', email: ''});
 
-    const find = (e) => {
+    const onChange = (e) => {
+        const userData = {...formState, [e.target.name]: e.target.value}
+        setFormState({...formState, ...userData})
+        getFilter(userData)
+    }
+
+    const back = (e) => {
+        e.preventDefault();
+        setFormState({name: '', username: '', email: ''})
+
+    }
+    const filter = (e) => {
         e.preventDefault();
         console.log(formState);
-        setFormState({name: '', username: '', email: ''})
-    }
-    const onChange = (e) => {
-        const userRequest = {...formState, [e.target.name]: e.target.value};
-        setFormState(...formState, ...userRequest)
-        getFilter(userRequest)
     }
 
     return (
         <div className={'formContainer'}>
-            <form className={'form'} onSubmit={find}>
+            <form className={'form'}>
                 <div>
                     <label>Name:
-                    </label>
                     <input type="text" name={'name'} value={formState.name} className={'inputStyle'}
                            onChange={onChange}/>
+                    </label>
                 </div>
                 <div>
                     <label>Username:
-                    </label>
                     <input type="text" name={'username'} value={formState.username} className={'inputStyle'}
                            onChange={onChange}/>
+                    </label>
                 </div>
                 <div>
                     <label>Email:
+                        <input type="text" name={'email'} value={formState.email} className={'inputStyle'}
+                               onChange={onChange}/>
                     </label>
-                    <input type="text" name={'email'} value={formState.email} className={'inputStyle'}
-                           onChange={onChange}/>
                 </div>
-                <button>Find</button>
+                <button onClick={filter}>Filter</button>
+                <button className={'btnBack'} onClick={back}>Back to All</button>
             </form>
-
         </div>
     );
 };
