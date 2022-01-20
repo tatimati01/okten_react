@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Post = ({posts}) => {
-    const {id, title, body} = posts;
+import './Post.css';
+
+const Post = ({post}) => {
+    console.log(post);
+    const {id, title, body} = post;
 
     return (
         <div className='stylePost'>

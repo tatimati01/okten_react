@@ -2,6 +2,7 @@
     width: 300px;
     padding: 20px;
     background: deepskyblue;
+    margin: 20px;
 }
 
 .btnPosts {
@@ -9,7 +10,7 @@
     border-radius: 10px;
     width: 120px;
     height: 40px;
-    background: lightblue;
+    background: lightgoldenrodyellow;
     font-weight: bold;
     font-size: large;
 }

@@ -2,16 +2,17 @@ import React, {useEffect, useState} from 'react';
 
 import Post from "../Post/Post";
 import {postService} from "../../services/post.services";
+import './Posts.css';
 
 const Posts = ({userId}) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(()=> {
-        postService.getUByUserId(userId).then(value => setPosts(value))
+        postService.getUByUserId(userId).then(value => console.log(setPosts(value)))
     },[userId])
 
     return (
-        <div>
+        <div className={'postsBlock'}>
             {posts.map(post=> <Post key={post.id} post={post}/>)}
         </div>
     );

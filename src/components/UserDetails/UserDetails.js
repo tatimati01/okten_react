@@ -17,7 +17,7 @@ const UserDetails = ({user, getUserId}) => {
                     <li>Company: {company.name}</li>
                 </ul>
             </h3>
-            <button className='btnPosts' onClick={getUserId(id)}>Get posts</button>
+            <button className='btnPosts' onClick={()=>getUserId(id)}>Get posts</button>
         </div>
     );
 };
