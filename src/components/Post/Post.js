@@ -3,7 +3,6 @@ import React from 'react';
 import './Post.css';
 
 const Post = ({post}) => {
-    console.log(post);
     const {id, title, body} = post;
 
     return (

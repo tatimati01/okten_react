@@ -8,7 +8,7 @@ const Posts = ({userId}) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(()=> {
-        postService.getUByUserId(userId).then(value => console.log(setPosts(value)))
+        postService.getUByUserId(userId).then(value => setPosts(value))
     },[userId])
 
     return (
