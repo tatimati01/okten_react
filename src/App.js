@@ -37,8 +37,7 @@ function App() {
 
     const backToAll = (e) => {
         e.preventDefault()
-        const allUsers = [...users]
-        setUsers(allUsers)
+        setUsers([...users])
     }
 
     return (
