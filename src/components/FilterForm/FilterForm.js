@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const FilterForm = ({getFilter}) => {
+const FilterForm = ({getFilter, backToAll}) => {
 
     const [formState, setFormState] = useState({name: '', username: '', email: ''});
 
@@ -10,33 +10,30 @@ const FilterForm = ({getFilter}) => {
         getFilter(userData)
     }
 
-    const back = (e) => {
-        e.preventDefault();
+    const formCleaner = () => {
         setFormState({name: '', username: '', email: ''})
+        console.log(backToAll());
     }
 
     return (
         <div className={'formContainer'}>
             <form className={'form'}>
                 <div>
-                    <label>Name:
-                        <input type="text" name={'name'} value={formState.name} className={'inputStyle'}
-                               onChange={onChange}/>
-                    </label>
+                    <label>Name: </label>
+                    <input type="text" name={'name'} value={formState.name} className={'inputStyle'}
+                           onChange={onChange}/>
                 </div>
                 <div>
-                    <label>Username:
-                        <input type="text" name={'username'} value={formState.username} className={'inputStyle'}
-                               onChange={onChange}/>
-                    </label>
+                    <label>Username: </label>
+                    <input type="text" name={'username'} value={formState.username} className={'inputStyle'}
+                           onChange={onChange}/>
                 </div>
                 <div>
-                    <label>Email:
-                        <input type="text" name={'email'} value={formState.email} className={'inputStyle'}
-                               onChange={onChange}/>
-                    </label>
+                    <label>Email: </label>
+                    <input type="text" name={'email'} value={formState.email} className={'inputStyle'}
+                           onChange={onChange}/>
                 </div>
-                <button className={'btnBack'} onClick={back}>Back to All</button>
+                <button className={'btnBack'} onClick={formCleaner}>Back to All</button>
             </form>
         </div>
     );

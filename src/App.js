@@ -1,6 +1,7 @@
+import {useEffect, useState} from "react";
+
 import './App.css';
 import FilterForm from "./components/FilterForm/FilterForm";
-import {useEffect, useState} from "react";
 import {usersService} from "./services/users.service";
 import Users from "./components/Users/Users";
 
@@ -34,9 +35,15 @@ function App() {
         setFiltered(filterArray)
     }
 
+    const backToAll = (e) => {
+        e.preventDefault()
+        const allUsers = [...users]
+        setUsers(allUsers)
+    }
+
     return (
         <div>
-            <FilterForm getFilter={getFilter}/>
+            <FilterForm getFilter={getFilter} backToAll={backToAll}/>
             <Users users={filtered}/>
         </div>
     );
