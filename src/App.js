@@ -20,15 +20,15 @@ function App() {
         let filterArray = [...users];
 
         if (data.name) {
-            filterArray = filterArray.filter(user => user.name.toLowerCase(data.name.toLowerCase()))
+            filterArray = filterArray.filter(user => user.name.toLowerCase().includes(data.name.toLowerCase()))
         }
 
         if (data.username) {
-            filterArray = filterArray.filter(user => user.username.toLowerCase(data.username.toLowerCase()))
+            filterArray = filterArray.filter(user => user.username.toLowerCase().includes(data.username.toLowerCase()))
         }
 
         if (data.email) {
-            filterArray = filterArray.filter(user => user.email.toLowerCase(data.email.toLowerCase()))
+            filterArray = filterArray.filter(user => user.email.toLowerCase().includes(data.email.toLowerCase()))
         }
 
         setFiltered(filterArray)

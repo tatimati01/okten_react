@@ -13,11 +13,6 @@ const FilterForm = ({getFilter}) => {
     const back = (e) => {
         e.preventDefault();
         setFormState({name: '', username: '', email: ''})
-
-    }
-    const filter = (e) => {
-        e.preventDefault();
-        console.log(formState);
     }
 
     return (
@@ -25,14 +20,14 @@ const FilterForm = ({getFilter}) => {
             <form className={'form'}>
                 <div>
                     <label>Name:
-                    <input type="text" name={'name'} value={formState.name} className={'inputStyle'}
-                           onChange={onChange}/>
+                        <input type="text" name={'name'} value={formState.name} className={'inputStyle'}
+                               onChange={onChange}/>
                     </label>
                 </div>
                 <div>
                     <label>Username:
-                    <input type="text" name={'username'} value={formState.username} className={'inputStyle'}
-                           onChange={onChange}/>
+                        <input type="text" name={'username'} value={formState.username} className={'inputStyle'}
+                               onChange={onChange}/>
                     </label>
                 </div>
                 <div>
@@ -41,7 +36,6 @@ const FilterForm = ({getFilter}) => {
                                onChange={onChange}/>
                     </label>
                 </div>
-                <button onClick={filter}>Filter</button>
                 <button className={'btnBack'} onClick={back}>Back to All</button>
             </form>
         </div>
