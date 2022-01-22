@@ -4,12 +4,12 @@ import {carService} from "../../services/car.service";
 import Car from "../Car/Car";
 import css from "../../App.module.css";
 
-const Cars = () => {
+const Cars = ({newCar}) => {
     const [cars,setCars] = useState([]);
 
     useEffect(()=> {
         carService.getAll().then(value=> setCars([...value]))
-    },[])
+    },[newCar])
 
     return (
         <div className={css.carsWrapper}>
