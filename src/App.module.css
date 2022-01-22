@@ -2,4 +2,19 @@
     background: yellowgreen;
     width: 100%;
     height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar h1 {
+    margin: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar a:hover {
+    color: midnightblue;
 }
