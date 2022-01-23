@@ -1,5 +1,16 @@
 import {Routes, Route} from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import Layout from "./components/Layout/Layout";
+import UsersPage from "./pages/UsersPage/UsersPage";
+import PostsPage from "./pages/PostsPage/PostsPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import UserDetails from "./components/UserDetails/UserDetails";
+import UsersPostsPage from "./pages/UsersPostsPage/UsersPostsPage";
+import PostsComments from "./components/PostComments/PostsComments";
+import AlbumsPage from "./pages/AlbumsPage/AlbumsPage";
+import PhotosPage from "./pages/PhotosPage/PhotosPage";
+import PostDetailsPage from "./pages/PostDetailsPage/PostDetailsPage";
+import PostCommentsPage from "./pages/PostCommentsPage/PostCommentsPage";
 
 
 function App() {
@@ -7,24 +18,27 @@ function App() {
 
     return (
         <div>
-            <div>
-                <HomePage/>
-            </div>
-            <div>
-
-                <Routes>
-                    <Route path={'/'} element={<HomePage/>}/>
-                    <Route path={'/users'}>
-                        <Route>
-
+            <Routes>
+                <Route path={'/'} element={<Layout/>}>
+                    <Route index element={<HomePage/>}/>
+                    <Route path={'users'} element={<UsersPage/>}>
+                        <Route path={':id'} element={<UserDetails/>}>
+                            <Route path={'posts'} element={<UsersPostsPage/>}/>
+                        </Route>
+                        <Route path={'albums'} element={<AlbumsPage/>}>
+                            <Route path={'photos'} element={<PhotosPage/>}/>
                         </Route>
                     </Route>
-                    <Route path={'/posts'}>
-
+                    <Route path={'posts'} element={<PostsPage/>}>
+                        <Route path={':id'} element={<PostDetailsPage/>}>
+                            <Route path={'comments'} element={<PostCommentsPage/>}/>
+                        </Route>
                     </Route>
-                </Routes>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
+                </Route>
 
-            </div>
+            </Routes>
+
         </div>
     );
 }

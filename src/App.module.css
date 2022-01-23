@@ -1,20 +1,12 @@
-.header {
-    background: yellowgreen;
-    width: 100%;
-    height: 60px;
+.homePage h1 {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
-.navbar h1 {
-    margin: 10px 20px;
+.notFoundPage h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.navbar a:hover {
-    color: midnightblue;
-}
