@@ -1,6 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
-import Content from "./components/Content/Content";
+import HomePage from "./pages/HomePage/HomePage";
 
 
 function App() {
@@ -9,12 +8,12 @@ function App() {
     return (
         <div>
             <div>
-                <NavBar/>
+                <HomePage/>
             </div>
             <div>
-                <Content/>
 
                 <Routes>
+                    <Route path={'/'} element={<HomePage/>}/>
                     <Route path={'/users'}>
                         <Route>
 
