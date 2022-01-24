@@ -10,3 +10,68 @@
     margin-top: 100px;
 }
 
+.postItem {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.postsContainer {
+    width: 50%;
+}
+
+.bodyContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.bodyContainer p {
+    width: 80%;
+    margin: 0;
+}
+
+.btnDetails {
+    background: yellowgreen;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    width: 180px;
+    height: 40px;
+    font-size: large;
+}
+
+.userContainer {
+    width: 50%;
+}
+
+.userItem {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userItem h3 {
+    margin: 10px;
+}
+
+.btnAlbums {
+    background: lightskyblue;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    width: 180px;
+    height: 40px;
+    font-size: large;
+}
+
+.btnBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

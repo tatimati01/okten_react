@@ -18,5 +18,10 @@
 }
 
 .header a:hover {
+    color: cornflowerblue;
+}
+
+.header a[class='active'] {
+    text-decoration: underline;
     color: midnightblue;
 }
