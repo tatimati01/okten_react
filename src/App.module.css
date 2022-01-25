@@ -10,6 +10,11 @@
     margin-top: 100px;
 }
 
+.postsPage, .userPage {
+    display: flex;
+    gap: 10px;
+}
+
 .postItem {
     background: whitesmoke;
     border-radius: 10px;
@@ -37,9 +42,13 @@
     background: yellowgreen;
     border: none;
     border-radius: 10px;
-    color: whitesmoke;
     width: 180px;
     height: 40px;
+}
+
+.btnDetails a {
+    text-decoration: none;
+    color: whitesmoke;
     font-size: large;
 }
 

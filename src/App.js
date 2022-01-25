@@ -1,4 +1,5 @@
 import {Routes, Route} from "react-router-dom";
+
 import HomePage from "./pages/HomePage/HomePage";
 import Layout from "./components/Layout/Layout";
 import UsersPage from "./pages/UsersPage/UsersPage";
@@ -6,7 +7,6 @@ import PostsPage from "./pages/PostsPage/PostsPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import UserDetails from "./components/UserDetails/UserDetails";
 import UsersPostsPage from "./pages/UsersPostsPage/UsersPostsPage";
-import PostsComments from "./components/PostComments/PostsComments";
 import AlbumsPage from "./pages/AlbumsPage/AlbumsPage";
 import PhotosPage from "./pages/PhotosPage/PhotosPage";
 import PostDetailsPage from "./pages/PostDetailsPage/PostDetailsPage";
