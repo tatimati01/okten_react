@@ -22,7 +22,7 @@
     margin-bottom: 10px;
 }
 
-.postsContainer {
+.postsContainer, .userContainer {
     width: 50%;
 }
 
@@ -52,10 +52,6 @@
     font-size: large;
 }
 
-.userContainer {
-    width: 50%;
-}
-
 .userItem {
     background: whitesmoke;
     border-radius: 10px;
@@ -73,14 +69,29 @@
     background: lightskyblue;
     border: none;
     border-radius: 10px;
-    color: whitesmoke;
     width: 180px;
     height: 40px;
+}
+
+.btnAlbums a {
+    color: whitesmoke;
     font-size: large;
+    text-decoration: none;
 }
 
 .btnBox {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+}
+
+.userDetails, .postDetails {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 60px;
+}
+
+.userDetails ul {
+    font-size: x-large;
 }
