@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {postsService} from "../../services/posts.service";
+import {useLocation} from "react-router-dom";
 
 const UsersPost = () => {
+    let {state} = useLocation();
+    console.log(state);
     let [posts,setPosts] = useState();
 
     useEffect(()=> {

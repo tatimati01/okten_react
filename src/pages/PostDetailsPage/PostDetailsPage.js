@@ -1,9 +1,10 @@
 import React from 'react';
+import PostDetails from "../../components/PostDetails/PostDetails";
 
 const PostDetailsPage = () => {
     return (
         <div>
-            Post Details
+            <PostDetails/>
         </div>
     );
 };
