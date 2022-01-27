@@ -26,7 +26,7 @@ function App() {
                             <Route path={'posts'} element={<UsersPostsPage/>}/>
                         </Route>
                         <Route path={':id/albums'} element={<AlbumsPage/>}>
-                            <Route path={':id/photos'} element={<PhotosPage/>}/>
+                            <Route path={':albumId/photos'} element={<PhotosPage/>}/>
                         </Route>
                     </Route>
                     <Route path={'posts'} element={<PostsPage/>}>
