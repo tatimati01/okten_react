@@ -1,28 +1,30 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useParams, Outlet} from "react-router-dom";
+import {useLocation, useParams, Outlet, NavLink} from "react-router-dom";
 
 import {postsService} from "../../services/posts.service";
 import css from '../../App.module.css'
 
 const PostDetails = () => {
     let {id} = useParams();
-    console.log(id);
     let {state} = useLocation();
     let [post,setPost] = useState(null);
 
     useEffect(() => {
         if (state) {
             setPost(state)
-            console.log(state);
         } else {
-            postsService.getPostById(id).then(value => setPost({...post}))
+            postsService.getPostById(id).then(post => setPost({...post}))
         }
     },[id, state, post])
     return (
         <div>
             {post && (
                 <div className={css.postDetails}>
+                    <h4>Post id: {post.id}</h4>
                     <h3>{post.body}</h3>
+                    <button onClick={(e)=>e.preventDefault()} className={css.btnAlbums}>
+                        <NavLink to={'comments'}>Comments</NavLink>
+                    </button>
                 </div>
             )}
             <Outlet/>

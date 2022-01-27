@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useParams, Link, Outlet} from "react-router-dom";
+import {useLocation, useParams, NavLink, Outlet} from "react-router-dom";
 
 import {usersService} from "../../services/users.service";
 import css from '../../App.module.css'
@@ -13,7 +13,7 @@ const UserDetails = () => {
         if (state) {
             setUser(state);
         } else {
-            usersService.getUserById(id).then(value => setUser({...user}))
+            usersService.getUserById(id).then(user => setUser({...user}))
         }
     }, [id, state, user])
 
@@ -30,7 +30,7 @@ const UserDetails = () => {
                         <li>Company: {user.company.name}</li>
                     </ul>
                     <button className={css.btnDetails} onClick={(e)=>e.preventDefault()}>
-                        <Link to={`posts`} state={user}>Show posts</Link>
+                        <NavLink to={`posts`}>Show posts</NavLink>
                     </button>
                 </div>
             )}

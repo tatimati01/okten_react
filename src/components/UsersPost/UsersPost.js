@@ -1,23 +1,26 @@
 import React, {useEffect, useState} from 'react';
+import {useParams} from "react-router-dom";
+
 import {postsService} from "../../services/posts.service";
-import {useLocation} from "react-router-dom";
+import css from '../../App.module.css'
 
 const UsersPost = () => {
-    let {state} = useLocation();
-    console.log(state);
-    let [posts,setPosts] = useState();
+    let {id} = useParams();
+    let [posts,setPosts] = useState([]);
 
     useEffect(()=> {
-        postsService.getAll().then(value => setPosts(value))
+        postsService.getPostsByUserId(id).then(value => setPosts(value))
+    },[id])
 
-    })
     return (
         <div>
-            Users posts
-            {posts.map(post=>
-                <div>
-                    {post.id} - {post.body}
-            </div>)}
+            {posts.map(post =>
+                <div key={post.id} className={css.commentItem}>
+                    <h3>User id: {post.userId}. Title: {post.title}</h3>
+                    <h4>{post.body}</h4>
+                </div>
+            )}
+
         </div>
     );
 };

@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 10px;
+    gap: 20px;
 }
 
 .bodyContainer p {
@@ -94,4 +94,35 @@
 
 .userDetails ul {
     font-size: x-large;
+}
+
+.commentItem {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 40px 10px;
+}
+
+.commentItem h3, .commentItem h4 {
+    margin: 10px 0;
+}
+
+.albumsContainer {
+    margin-top: 60px;
+}
+
+.photosContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.photoItem {
+    width: 200px;
+}
+
+.btnDetails a[class='active'], .btnAlbums a[class='active'] {
+    color: midnightblue;
+    font-weight: bolder;
 }

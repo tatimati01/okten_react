@@ -6,5 +6,5 @@ export const urls = {
     users: '/users',
     posts: '/posts',
     albums: '/albums',
-    comments: '/comments'
+    // comments: '/comments'
 }

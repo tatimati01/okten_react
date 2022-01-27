@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Photos from "../../components/Photos/Photos";
 
 const PhotosPage = () => {

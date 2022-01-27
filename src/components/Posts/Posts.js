@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import {Outlet, NavLink} from "react-router-dom";
 
 import {postsService} from "../../services/posts.service";
 import css from '../../App.module.css'
-import {Outlet, Link} from "react-router-dom";
 
 
 const Posts = () => {
@@ -21,7 +21,7 @@ const Posts = () => {
                         <h3>{post.id} - {post.title}</h3>
                         <div className={css.bodyContainer}>
                             <button className={css.btnDetails} onClick={(e)=>e.preventDefault()}>
-                                <Link to={post.id.toString()} state={post}>Show details</Link>
+                                <NavLink to={post.id.toString()} state={post}>Show details</NavLink>
                             </button>
                         </div>
                     </div>

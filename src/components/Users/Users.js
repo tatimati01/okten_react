@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import {NavLink, Outlet} from "react-router-dom";
 
 import {usersService} from "../../services/users.service";
 import css from '../../App.module.css'
-import {Link, Outlet} from "react-router-dom";
 
 const Users = () => {
     let [users, setUsers] = useState([]);
@@ -20,10 +20,10 @@ const Users = () => {
                         <h3>{user.id} - {user.name} ({user.username})</h3>
                         <div className={css.btnBox}>
                             <button className={css.btnDetails} onClick={(e)=>e.preventDefault()}>
-                                <Link to={user.id.toString()} state={user}>Show details</Link>
+                                <NavLink to={user.id.toString()} state={user}>Show details</NavLink>
                             </button>
                             <button className={css.btnAlbums} onClick={(e)=>e.preventDefault()}>
-                                <Link to={`${user.id.toString()}/albums`}>Show albums</Link>
+                                <NavLink to={`${user.id.toString()}/albums`}>Show albums</NavLink>
                             </button>
                         </div>
                     </div>
