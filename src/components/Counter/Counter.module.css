@@ -1,0 +1,13 @@
+.countersWrapper {
+    display: flex;
+}
+
+.counterBox {
+    border:midnightblue 1px solid;
+    padding: 20px;
+    margin: 10px;
+}
+
+.counterBox h2 {
+    text-align: center;
+}
