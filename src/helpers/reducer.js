@@ -1,5 +1,5 @@
 
-const Reducer = (state, action) => {
+const reducer = (state, action) => {
     switch (action.type) {
         case 'inc1': {
             return {...state, counter1: state.counter1 +1}
@@ -34,4 +34,4 @@ const Reducer = (state, action) => {
     }
 };
 
-export default Reducer;
+export default reducer;

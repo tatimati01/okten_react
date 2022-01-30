@@ -1,11 +1,11 @@
 import React, {useReducer} from 'react';
 
 import css from './Counter.module.css';
-import Reducer from "../../helpers/Reducer";
+import reducer from "../../helpers/reducer";
 
 const Counter = () => {
 
-    let [state, dispatch] = useReducer(Reducer, {counter1: 0, counter2: 0, counter3: 0});
+    let [state, dispatch] = useReducer(reducer, {counter1: 0, counter2: 0, counter3: 0});
 
     return (
         <div className={css.countersWrapper}>
