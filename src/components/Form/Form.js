@@ -1,20 +1,22 @@
 import React from 'react';
 
-const Form = () => {
+import css from '../../App.module.css'
+
+const Form = (dispatch) => {
 
 
 
     return (
-        <div>
+        <div className={css.formContainer}>
             <form>
                 <label>Add cat</label>
                 <input type="text"/>
-                <button onClick={(e)=>e.preventDefault()}>Save</button>
+                <button onClick={()=> dispatch({type: 'dog'})}>Save</button>
             </form>
             <form>
                 <label>Add dog</label>
                 <input type="text"/>
-                <button onClick={(e)=>e.preventDefault()}>Save</button>
+                <button onClick={()=> dispatch({type: 'dog'})}>Save</button>
             </form>
         </div>
     );

@@ -1,0 +1,32 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    border-bottom: midnightblue 2px solid;
+    padding: 20px;
+}
+
+.formContainer label {
+    font-size: 28px;
+    margin: 10px 20px;
+}
+
+.formContainer input {
+    padding: 5px;
+    font-size: 18px;
+}
+
+.formContainer button {
+    padding: 10px 30px;
+    margin: 10px 20px;
+    font-size: larger;
+}
+
+.petsContainer {
+    background: lightgrey;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin: 20px 40px;
+}
