@@ -5,12 +5,14 @@ import {useState} from "react";
 
 function App() {
 
-    const [newCar, setNewCar] = useState(null);
+    const [car, setCar] = useState(null);
+
+    const [updateCar, setUpdateCar] = useState({});
 
     return (
         <div className={css.mainWrapper}>
-            <Cars newCar={newCar}/>
-            <Form setNewCar={setNewCar}/>
+            <Cars car={car} update={setCar} setUpdateCar={setUpdateCar}/>
+            <Form update={setCar} updateCar={updateCar}/>
         </div>
     );
 }
