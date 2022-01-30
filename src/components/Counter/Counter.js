@@ -1,7 +1,7 @@
 import React, {useReducer} from 'react';
 
 import css from './Counter.module.css';
-import Reducer from "../Reducer/Reducer";
+import Reducer from "../../helpers/Reducer";
 
 const Counter = () => {
 

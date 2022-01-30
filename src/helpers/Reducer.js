@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Reducer = (state, action) => {
     switch (action.type) {
@@ -33,12 +32,6 @@ const Reducer = (state, action) => {
             return state
         }
     }
-
-    return (
-        <div>
-            {state}
-        </div>
-    );
 };
 
 export default Reducer;
