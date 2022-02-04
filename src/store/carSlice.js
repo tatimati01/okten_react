@@ -7,10 +7,13 @@ const carSlice = createSlice({
     },
     reducers: {
         addCar: (state,action)=> {
-
+            state.cars.push({
+                id: new Date().getTime(),
+                ...action.payload.data
+            })
         },
-        deleteCar: (state,action)=> {
-
+        deleteCar: (state, action)=> {
+            state.cars = state.cars.filter(car => car.id !== action.payload.id)
         }
     }
 });
