@@ -1,0 +1,50 @@
+.formStyle {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid lightblue;
+}
+
+.formStyle input {
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.formStyle button, .taskStyle button {
+    margin: 20px;
+    padding: 5px 20px;
+    font-size: larger;
+    border: none;
+    border-radius: 10px;
+    background: lightblue;
+}
+
+.taskListStyle {
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.taskStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.taskStyle h3 {
+    margin: 10px;
+}
+
+.completedTask {
+    color: lightgray;
+}
+
+.counters {
+    display: flex;
+    justify-content: center;
+    gap: 40px
+}
