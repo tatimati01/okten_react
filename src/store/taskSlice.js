@@ -14,16 +14,13 @@ const taskSlice = createSlice({
         },
         deleteTask: (state, action) => {
             const index = state.tasks.findIndex(task => task.id === action.payload.id)
-            // console.log(index);
-            state.tasks.splice(index, 1)
-            // console.log(state.tasks[index].status);
-            state.countNew = state.countNew - 1
             if (state.tasks[index].status) {
                 state.countDone = state.countDone - 1
                 state.countNew = state.countNew - 1
             } else {
                 state.countNew = state.countNew - 1
             }
+            state.tasks.splice(index, 1)
         },
         completeTheTask: (state, action) => {
             const completedTask = state.tasks.find(task => task.id === action.payload.id);
